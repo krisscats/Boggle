@@ -1,0 +1,18 @@
+180
+A, E, O, S, R, N
+A, I, D, L, R, U
+M, A, N, O, C, T
+P, E, L, A, S, T
+I, Q, U, E, R, O
+B, A, J, O, L, A
+V, E, R, D, A, Z
+C, H, A, R, M, O
+S, I, N, E, L, T
+D, U, L, C, E, M
+QU, S, E, Z, A, N
+T, R, A, I, D, O
+G, R, A, N, D, E
+E, X, A, M, E, N
+A, R, T, E, L, O
+C, O, R, A, Z, O
+diccionario.txt
