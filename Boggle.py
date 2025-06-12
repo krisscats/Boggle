@@ -5,8 +5,8 @@
 'tiempo limite 180 segundos'
 import random
 
-def leer_config(ruta_config):
-    with open(ruta_config, 'r') as f: # ruta_config es el archivo de configuracion y aqui lo lee
+def leer_config(config):
+    with open(config, 'r') as f: # ruta_config es el archivo de configuracion y aqui lo lee
         tiempo = int(f.readline().strip())  # Primera línea del tiempo
         dados = []
         for linea in f:
