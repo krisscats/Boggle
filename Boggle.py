@@ -4,7 +4,6 @@
 'Matriz de 4x4 generada aleatoriamente con 16 dados con letras especificas'
 'tiempo limite 180 segundos'
 import random
-
 def leer_config(config):
     with open(config, 'r') as f: # ruta_config es el archivo de configuracion y aqui lo lee
         tiempo = int(f.readline().strip())  # Primera línea del tiempo
@@ -17,14 +16,6 @@ def leer_config(config):
             dados.append(caras)
     return tiempo, dados, archivo_diccionario
 
-def cargar_diccionario(ruta_diccionario):
-    with open(ruta_diccionario, 'r', encoding='utf-8') as f:
-        return {palabra.strip().upper() for palabra in f}
-
-# Aquí se leen los datos de configuración y pues le hacems uso
-tiempo, dados, nombre_archivo_diccionario = leer_config('config.txt')
-diccionario = cargar_diccionario(nombre_archivo_diccionario)
-
 def generar_tablero(dados): 
     random.shuffle(dados)  # Barajar dados usando random
     tablero = []
@@ -35,6 +26,10 @@ def generar_tablero(dados):
         tablero.append(cara) #aqui se agrega la cara seleccionada al tablero
     # Convertir a matriz 4x4 
     return [tablero[i*4:(i+1)*4] for i in range(4)]
+# Definir la ruta al archivo de configuración
+config_path = 'config.txt'  # Cambia esto por la ruta correcta si es necesario
+# Leer configuración y obtener dados
+tiempo, dados, archivo_diccionario = leer_config(config_path)
 tablero = generar_tablero(dados)
 print("Tablero random:")
 for fila in tablero:
