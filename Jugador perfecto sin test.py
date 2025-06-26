@@ -3,7 +3,7 @@ def qs(L):
         return []
     menores = []
     mayores = []
-    rata = L[0]  # Elegimos el primer elemento como pivote ("rata")
+    rata = L[0] 
     for i in range(1, len(L)):
         if L[i] < rata:
             menores.append(L[i])
