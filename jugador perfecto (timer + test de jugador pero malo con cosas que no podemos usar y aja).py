@@ -135,7 +135,7 @@ def jugar(tablero, diccionario, tiempo_limite):
     while True:
         tiempo_restante = int(tiempo_limite - (time.time() - start_time))
         if tiempo_restante <= 0:
-            print("\n⏰ ¡Se acabó el tiempo!")
+            print("\n¡Se acabó el tiempo!")
             break
 
         print(f"\nTiempo restante: {tiempo_restante}s")
@@ -146,16 +146,16 @@ def jugar(tablero, diccionario, tiempo_limite):
             break
 
         if entrada in palabras_usadas:
-            print("❌ Ya usaste esa palabra.")
+            print("Ya usaste esa palabra.")
         elif not buscar_en_trie(diccionario, entrada):
-            print("❌ No está en el diccionario.")
+            print("No está en el diccionario.")
         elif not esta_en_tablero(tablero, entrada):
-            print("❌ No se puede formar en el tablero.")
+            print("No se puede formar en el tablero.")
         else:
             palabras_usadas.append(entrada)
             puntos = calcular_puntaje(entrada)
             puntaje_total += puntos
-            print(f"✅ Válida ({puntos} puntos)")
+            print(f"Válida ({puntos} puntos)")
 
     print(f"\nPuntaje final: {puntaje_total} puntos")
 
@@ -239,7 +239,7 @@ if __name__ == "__main__":
     modo = input("\n¿Querés jugar (1) o ver el jugador perfecto (2)? ").strip()
     if modo == "2":
         palabras = jugadorPerf(tablero, trie_root)
-        print(f"\n🧠 Palabras encontradas ({len(palabras)}):")
+        print(f"\nPalabras encontradas ({len(palabras)}):")
         for p in palabras:
             print(p)
         print(f"\nPuntaje perfecto: {sum(calcular_puntaje(p) for p in palabras)}")
